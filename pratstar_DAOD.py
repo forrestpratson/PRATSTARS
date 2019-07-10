@@ -164,7 +164,7 @@ if view != 'Longitudinal': #If view is 'Transverse' or 'Both'
     plt.rcParams["figure.figsize"] = [9,9]
 
     plt.savefig(save_loc + '/Run_' +str(runnos[event_number]) +'_Event_'+str(evt_num)+'_Transverse',dpi=200)
-    if args.show=='True':
+    if args.show==True:
         os.system("open " + save_loc + '/Run_' +str(runnos[event_number]) +'_Event_'+str(evt_num)+'_Transverse.png')
     plt.close()
 
@@ -220,6 +220,6 @@ if view != 'Transverse':
     ax.set_ylim(-1.5,1.5)
     plt.rcParams["figure.figsize"] = [9,9]
     plt.savefig(save_loc + '/Run_'+str(runnos[event_number])+'_Event_'+str(evt_num)+'_Longitudinal',dpi=200)
-    if args.show=='True':
+    if args.show==True:
         os.system("open " + save_loc + '/Run_'+str(runnos[event_number])+'_Event_'+str(evt_num)+'_Longitudinal.png')
     plt.close()
